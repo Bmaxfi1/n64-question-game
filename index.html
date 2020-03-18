@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style src="assets/style.css"></style>
+</head>
+<body>
+    <h1>N64 Quiz</h1>
+    <div id="initiate-game">press <button id="start-button" onclick="initiateGame()">Start</button> to begin or restart the game!
+    </div>
+    <div id="question-section">
+        <div id="current-question"></div>
+        <div id="answer-buttons">
+            <button id="true-button" onclick="answerGiven(true)">True</button>
+            <button id="false-button" onclick="answerGiven(false)">False</button>
+        </div>
+        <div id="current-score"></div>
+    </div>
+    <div id="final-results"></div>
+    <script src="assets/javascript.js"></script>
+</body>
+</html>
