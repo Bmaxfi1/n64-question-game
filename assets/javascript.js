@@ -86,8 +86,10 @@ function displayCurrentScore() {
 
 //Game mechanism
 var currentQuestion;
+var currentAnswer;
 var currentScore = 0;
-var n = 0;
+var q = 0;
+var a = 0;
 
 function showElement(id) {
   id.style.display = "block";
@@ -97,29 +99,37 @@ function hideElement(id) {
   id.style.display = "none";
 }
 function initiateGame() {
-  currentQuestion = questionArray[0].q;
-  currentAnswer = questionArray[0].a;
+  var q = 0;
+  var a = 0;
+  currentQuestion = questionArray[q].q;
+  currentAnswer = questionArray[a].a;
   displayCurrentQuestion();
   showElement(answerButtonsEl);
   currentScore = 0;
   displayCurrentScore();
   hideElement(initiateGameEl);
 }
-function answerGiven(x) {
-  if (x == currentAnswer) {
+function trueButtonPress() {
+  if (currentAnswer === true) {
     currentScore = currentScore + 1;
+    displayCurrentScore();
   }
-  displayCurrentScore;
-
-  if (n < questionArray.length - 1) {
-    n++;
-    currentQuestion = questionArray[n].q;
-    currentAnswer = questionArray[n].a;
-    displayCurrentQuestion;
-  } else {
-    hideElement(currentQuestionEl);
-    hideElement(answerButtonsEl);
+  q++;
+  a++;
+  currentQuestion = questionArray[q].q;
+  currentAnswer = questionArray[a].a;
+  displayCurrentQuestion();
+}
+function falseButtonPress() {
+  if (currentAnswer === false) {
+    currentScore = currentScore + 1;
+    displayCurrentScore();
   }
+  q++;
+  a++;
+  currentQuestion = questionArray[q].q;
+  currentAnswer = questionArray[a].a;
+  displayCurrentQuestion();
 }
 
 //Runs when the page is loaded
