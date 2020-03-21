@@ -114,22 +114,32 @@ function trueButtonPress() {
     currentScore = currentScore + 1;
     displayCurrentScore();
   }
-  q++;
-  a++;
-  currentQuestion = questionArray[q].q;
-  currentAnswer = questionArray[a].a;
-  displayCurrentQuestion();
+  if (q < questionArray.length - 1) {
+    q++;
+    a++;
+    currentQuestion = questionArray[q].q;
+    currentAnswer = questionArray[a].a;
+    displayCurrentQuestion();
+  } else {
+    hideElement(answerButtonsEl);
+    hideElement(currentQuestionEl);
+  }
 }
 function falseButtonPress() {
   if (currentAnswer === false) {
     currentScore = currentScore + 1;
     displayCurrentScore();
   }
-  q++;
-  a++;
-  currentQuestion = questionArray[q].q;
-  currentAnswer = questionArray[a].a;
-  displayCurrentQuestion();
+  if (q < questionArray.length - 1) {
+    q++;
+    a++;
+    currentQuestion = questionArray[q].q;
+    currentAnswer = questionArray[a].a;
+    displayCurrentQuestion();
+  } else {
+    hideElement(answerButtonsEl);
+    hideElement(currentQuestionEl);
+  }
 }
 
 //Runs when the page is loaded
