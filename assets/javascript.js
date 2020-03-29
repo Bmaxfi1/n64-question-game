@@ -70,7 +70,7 @@ var questionArray = [
 //This is where I will assign the variables to the html ID's
 var startButtonEl = document.getElementById("start-button");
 var currentQuestionEl = document.getElementById("current-question");
-var answerButtonsEl = document.getElementById("answer-buttons");
+var answerButtonsEl = document.getElementsByClassName("answer-buttons")[0];
 var trueButtonEl = document.getElementById("true-button");
 var falseButtonEl = document.getElementById("false-button");
 var currentScoreEl = document.getElementById("current-score");
@@ -92,12 +92,12 @@ var currentScore = 0;
 var q = 0;
 var a = 0;
 
-function showElement(id) {
-  id.style.display = "block";
+function showElement(e) {
+  e.style.display = "flex";
 }
 
-function hideElement(id) {
-  id.style.display = "none";
+function hideElement(e) {
+  e.style.display = "none";
 }
 function initiateGame() {
   var q = 0;
@@ -114,26 +114,9 @@ function restartGame() {
   location.reload(true);
 }
 
-function trueButtonPress() {
-  if (currentAnswer === true) {
-    currentScore = currentScore + 1;
-    displayCurrentScore();
-  }
-  if (q < questionArray.length - 1) {
-    q++;
-    a++;
-    currentQuestion = questionArray[q].q;
-    currentAnswer = questionArray[a].a;
-    displayCurrentQuestion();
-  } else {
-    hideElement(answerButtonsEl);
-    hideElement(currentQuestionEl);
-    showElement(restartGameEl);
-  }
-}
-function falseButtonPress() {
-  if (currentAnswer === false) {
-    currentScore = currentScore + 1;
+function buttonPress(answer) {
+  if (currentAnswer === answer) {
+    currentScore++;
     displayCurrentScore();
   }
   if (q < questionArray.length - 1) {

@@ -3,7 +3,10 @@ body {
     margin: 0px;
     padding: 0px;
 }
-
+.answer-buttons {
+    display: flex;
+    justify-content: space-around;
+}
 #header {
     margin: 0px;
     margin-bottom: 10px;
@@ -22,10 +25,6 @@ body {
     justify-content: center;
     padding-top: 10px;
     padding-bottom: 10px;
-}
-#answer-buttons {
-    display: flex;
-    justify-content: space-around;
 }
 #current-score {
     display: flex;
