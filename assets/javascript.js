@@ -51,7 +51,7 @@ var question9 = {
 
 var question10 = {
   q:
-    "in Banjo-Kazooie, Kazooie is the name of the red bird companion on your back.",
+    "In Banjo-Kazooie, Kazooie is the name of the red bird companion on your back.",
   a: true
 };
 
@@ -75,6 +75,7 @@ var trueButtonEl = document.getElementById("true-button");
 var falseButtonEl = document.getElementById("false-button");
 var currentScoreEl = document.getElementById("current-score");
 var initiateGameEl = document.getElementById("initiate-game");
+var restartGameEl = document.getElementById("restart-game");
 
 //The following functions will be used to change the HTML
 function displayCurrentQuestion() {
@@ -109,6 +110,10 @@ function initiateGame() {
   displayCurrentScore();
   hideElement(initiateGameEl);
 }
+function restartGame() {
+  location.reload(true);
+}
+
 function trueButtonPress() {
   if (currentAnswer === true) {
     currentScore = currentScore + 1;
@@ -123,6 +128,7 @@ function trueButtonPress() {
   } else {
     hideElement(answerButtonsEl);
     hideElement(currentQuestionEl);
+    showElement(restartGameEl);
   }
 }
 function falseButtonPress() {
@@ -139,8 +145,10 @@ function falseButtonPress() {
   } else {
     hideElement(answerButtonsEl);
     hideElement(currentQuestionEl);
+    showElement(restartGameEl);
   }
 }
 
 //Runs when the page is loaded
 hideElement(answerButtonsEl);
+hideElement(restartGameEl);

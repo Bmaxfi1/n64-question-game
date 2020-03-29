@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style src="assets/style.css"></style>
+    <link href="assets/style.css" rel="stylesheet"></link>
 </head>
 <body>
-    <h1>N64 Quiz</h1>
-    <div id="initiate-game">press <button id="start-button" onclick="initiateGame()">Start</button> to begin or restart the game!
+    <div id="header">N64 Quiz</div>
+    <div id="initiate-game">Press <button id="start-button" onclick="initiateGame()">Start</button> to begin the game!
     </div>
     <div id="question-section">
         <div id="current-question"></div>
@@ -18,7 +18,7 @@
         </div>
         <div id="current-score"></div>
     </div>
-    <div id="final-results"></div>
+    <div id="restart-game">Play again? <button id="restart-button" onclick="restartGame()">Lets-a-go!</button></div>
     <script src="assets/javascript.js"></script>
 </body>
 </html>

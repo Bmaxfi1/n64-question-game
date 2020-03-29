@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+#header {
+    margin: 0px;
+    margin-bottom: 10px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px black solid;
+    font-size: 30px;
+}
+#initiate-game {
+    display: flex;
+    justify-content: center;
+}
+#current-question {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#answer-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+#current-score {
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+}
+#restart-game {
+    display: flex;
+    justify-content: space-around;
+}
