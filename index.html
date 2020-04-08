@@ -7,18 +7,24 @@
     <link href="assets/style.css" rel="stylesheet"></link>
 </head>
 <body>
-    <div id="header">N64 Quiz</div>
-    <div id="initiate-game">Press <button id="start-button" onclick="initiateGame()">Start</button> to begin the game!
+    <div id="header">
+        <img id="header-img" src="assets/images/n64logo.png" alt="">
+        
     </div>
-    <div id="question-section">
-        <div id="current-question"></div>
-        <div class="answer-buttons">
-            <button id="true-button" onclick="buttonPress(true)">True</button>
-            <button id="false-button" onclick="buttonPress(false)">False</button>
+    <div class="main-section">
+        <div id="initiate-game">
+            Press <button id="start-button" onclick="initiateGame()">Start</button> to begin the game!
         </div>
-        <div id="current-score"></div>
+        <div id="question-section">
+            <div id="current-question"></div>
+            <div class="answer-buttons">
+                <button id="true-button" onclick="buttonPress(true)">True</button>
+                <button id="false-button" onclick="buttonPress(false)">False</button>
+            </div>
+            <div id="current-score"></div>
+        </div>
+        <div id="restart-game">Play again?  <button id="restart-button" onclick="restartGame()">Lets-a-go!</button></div>
     </div>
-    <div id="restart-game">Play again? <button id="restart-button" onclick="restartGame()">Lets-a-go!</button></div>
     <script src="assets/javascript.js"></script>
 </body>
 </html>

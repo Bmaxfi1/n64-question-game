@@ -3,6 +3,10 @@ body {
     margin: 0px;
     padding: 0px;
 }
+.main-section {
+    background-color: blanchedalmond;
+
+}
 .answer-buttons {
     display: flex;
     justify-content: space-around;
@@ -12,19 +16,27 @@ body {
     margin-bottom: 10px;
     padding: 0px;
     display: flex;
-    justify-content: space-evenly;
-    border-bottom: 1px black solid;
-    font-size: 30px;
+    justify-content: center;
+    font-size: 50px;
+    align-items: center;
+}
+#header-img {
+    width: 25%;
 }
 #initiate-game {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 #current-question {
     display: flex;
     justify-content: center;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+.answer-buttons {
+    display: flex;
+    justify-content: center;
 }
 #current-score {
     display: flex;
@@ -33,5 +45,5 @@ body {
 }
 #restart-game {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
